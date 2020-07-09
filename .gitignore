@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Unit test / coverage reports
+htmlcov/
+coverage.xml
+.coverage
+.coverage.*
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
