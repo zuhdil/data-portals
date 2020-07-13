@@ -23,3 +23,9 @@ coverage.xml
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+
+# Node
+node_modules/
+.next/
+coverage/

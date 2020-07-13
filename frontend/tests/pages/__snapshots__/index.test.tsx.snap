@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  <h1>
+    Welcome to Next.js!
+  </h1>
+  <a
+    href="/ping"
+  >
+    Ping backend
+  </a>
+</DocumentFragment>
+`;

@@ -47,7 +47,7 @@ def get_database_session(
         db.close()
 
 
-@app.get("/ping")
+@app.get("/ping", include_in_schema=False)
 async def ping(session: Session = Depends(get_database_session)) -> Any:
     result = session.execute("SELECT 1")
     return {"ping": "pong!", "db": True if result else False}
