@@ -1,14 +1,11 @@
-import Link from 'next/link'
+import { StatelessComponent } from 'react'
 
-function HomePage() {
+const Home: StatelessComponent = () => {
   return (
     <>
-      <h1>Welcome to Next.js!</h1>
-      <Link href="/ping">
-        <a>Ping backend</a>
-      </Link>
+      <h1>Data portal WASH Mali</h1>
     </>
   )
 }
 
-export default HomePage
+export default Home

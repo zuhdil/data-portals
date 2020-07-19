@@ -3,13 +3,14 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write .",
+    "typecheck": "tsc --pretty --noEmit",
     "lint": "eslint .",
     "test": "jest --ci --coverage",
     "test:watch": "jest --watchAll",
-    "type:check": "tsc --pretty --noEmit"
+    "format": "prettier --write ."
   },
   "dependencies": {
+    "antd": "^4.4.2",
     "next": "^9.4.4",
     "node-fetch": "^2.6.0",
     "pm2": "^4.4.0",
@@ -29,6 +30,7 @@
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-react": "^7.20.3",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.1.0",
     "msw": "^0.19.5",
     "prettier": "^2.0.5",
@@ -108,7 +110,8 @@
       "!**/*.d.ts",
       "!**/node_modules/**",
       "!**/.next/**",
-      "!**/coverage/**"
+      "!**/coverage/**",
+      "!**/tests/**"
     ],
     "coverageThreshold": {
       "global": {
@@ -117,6 +120,9 @@
         "lines": 100,
         "statements": 100
       }
+    },
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
     },
     "testPathIgnorePatterns": [
       "node_modules/",

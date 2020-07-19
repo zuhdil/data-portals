@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import fetch from 'node-fetch'
+import { StatelessComponent } from 'react'
+import { GetServerSideProps } from 'next'
 
 type Props = {
   ping: string
 }
 
-function Ping({ ping }: Props) {
+const Ping: StatelessComponent<Props> = ({ ping }) => {
   return (
     <>
       <h1>{ping}</h1>
@@ -16,7 +18,7 @@ function Ping({ ping }: Props) {
   )
 }
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const res = await fetch('http://backend:9000/ping')
   const json = await res.json()
 

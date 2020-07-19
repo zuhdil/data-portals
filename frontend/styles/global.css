@@ -1,0 +1,22 @@
+.layout-header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+.layout-header .logo {
+  display: block;
+  width: 200px;
+  height: 64px;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+
+.layout-header .logo img {
+  filter: invert(100%);
+  position: relative;
+  top: -25px;
+  left: -25px;
+}

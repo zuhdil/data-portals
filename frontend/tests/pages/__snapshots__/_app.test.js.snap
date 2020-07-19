@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomApp layout matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="ant-layout"
+  >
+    <header
+      class="ant-layout-header layout-header"
+    >
+      <div
+        class="logo"
+      >
+        <a
+          href="/"
+        >
+          <img
+            src="/logo.svg"
+          />
+        </a>
+      </div>
+      <ul
+        class="ant-menu ant-menu-dark ant-menu-root ant-menu-horizontal"
+        role="menu"
+      >
+        <li
+          class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu"
+          role="menuitem"
+          style="display: none;"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="ant-menu-submenu-title"
+            role="button"
+          >
+            <span>
+              ···
+            </span>
+            <i
+              class="ant-menu-submenu-arrow"
+            />
+          </div>
+        </li>
+        <li
+          class="ant-menu-item ant-menu-item-only-child"
+          role="menuitem"
+        >
+          <a
+            href="/water"
+          >
+            Water
+          </a>
+        </li>
+        <li
+          class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu"
+          role="menuitem"
+          style="display: none;"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="ant-menu-submenu-title"
+            role="button"
+          >
+            <span>
+              ···
+            </span>
+            <i
+              class="ant-menu-submenu-arrow"
+            />
+          </div>
+        </li>
+        <li
+          class="ant-menu-item ant-menu-item-only-child"
+          role="menuitem"
+        >
+          <a
+            href="/water-quality"
+          >
+            Water quality
+          </a>
+        </li>
+        <li
+          class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu"
+          role="menuitem"
+          style="display: none;"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="ant-menu-submenu-title"
+            role="button"
+          >
+            <span>
+              ···
+            </span>
+            <i
+              class="ant-menu-submenu-arrow"
+            />
+          </div>
+        </li>
+        <li
+          class="ant-menu-item ant-menu-item-only-child"
+          role="menuitem"
+        >
+          <a
+            href="/sanitation"
+          >
+            Sanitation
+          </a>
+        </li>
+        <li
+          class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu"
+          role="menuitem"
+          style="display: none;"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="ant-menu-submenu-title"
+            role="button"
+          >
+            <span>
+              ···
+            </span>
+            <i
+              class="ant-menu-submenu-arrow"
+            />
+          </div>
+        </li>
+        <li
+          class="ant-menu-item ant-menu-item-only-child"
+          role="menuitem"
+        >
+          <a
+            href="/hygiene"
+          >
+            Hygiene
+          </a>
+        </li>
+        <li
+          class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu"
+          role="menuitem"
+          style="display: none;"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="ant-menu-submenu-title"
+            role="button"
+          >
+            <span>
+              ···
+            </span>
+            <i
+              class="ant-menu-submenu-arrow"
+            />
+          </div>
+        </li>
+        <li
+          class="ant-menu-item ant-menu-item-only-child"
+          role="menuitem"
+        >
+          <a
+            href="/data"
+          >
+            Data
+          </a>
+        </li>
+        <li
+          class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu"
+          role="menuitem"
+          style="display: none;"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="ant-menu-submenu-title"
+            role="button"
+          >
+            <span>
+              ···
+            </span>
+            <i
+              class="ant-menu-submenu-arrow"
+            />
+          </div>
+        </li>
+        <li
+          class="ant-menu-item ant-menu-item-only-child"
+          role="menuitem"
+        >
+          <a
+            href="/guide"
+          >
+            Guide
+          </a>
+        </li>
+        <li
+          class="ant-menu-submenu ant-menu-submenu-horizontal ant-menu-overflowed-submenu"
+          role="menuitem"
+          style="visibility: hidden; position: absolute; display: none;"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="ant-menu-submenu-title"
+            role="button"
+          >
+            <span>
+              ···
+            </span>
+            <i
+              class="ant-menu-submenu-arrow"
+            />
+          </div>
+        </li>
+      </ul>
+    </header>
+    <main
+      class="ant-layout-content"
+      style="padding: 100px 50px 50px;"
+    >
+      <h1>
+        Data portal WASH Mali
+      </h1>
+    </main>
+    <footer
+      class="ant-layout-footer"
+    >
+      <p>
+        Ut consequat feugiat justo, ornare dignissim sapien mollis tempor. Cras sed dui eget nisl ultricies cursus. Maecenas sollicitudin hendrerit cursus. Nullam pulvinar ex at neque maximus, dignissim pharetra justo interdum. Phasellus iaculis convallis ante. Proin vel interdum lorem, ac ornare neque. Donec quam quam, placerat hendrerit pulvinar venenatis, viverra eu neque. Pellentesque non quam velit. Aliquam urna quam, ullamcorper eu nisi sed, tempus sodales sapien. Aenean finibus mauris leo, sit amet luctus felis aliquet ut. In tristique tincidunt felis id posuere. Curabitur nisl orci, tincidunt nec ornare id, feugiat in eros. Donec et metus lobortis, bibendum mauris vitae, scelerisque ipsum.
+      </p>
+    </footer>
+  </section>
+</DocumentFragment>
+`;

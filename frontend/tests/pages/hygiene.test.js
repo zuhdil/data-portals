@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import HomePage from '../../pages/index'
+import Hygiene from '../../pages/hygiene'
 
-describe('Home page', () => {
+describe('Hygiene page', () => {
   it('matches snapshot', () => {
-    const { asFragment } = render(<HomePage />, {})
+    const { asFragment } = render(<Hygiene />, {})
     expect(asFragment()).toMatchSnapshot()
   })
 })

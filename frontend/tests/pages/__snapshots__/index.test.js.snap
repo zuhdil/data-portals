@@ -3,12 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <h1>
-    Welcome to Next.js!
+    Data portal WASH Mali
   </h1>
-  <a
-    href="/ping"
-  >
-    Ping backend
-  </a>
 </DocumentFragment>
 `;

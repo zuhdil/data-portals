@@ -17,7 +17,7 @@ docker-compose up -d
 docker-compose exec -T backend python ./wait_for_database.py
 docker-compose exec -T backend ./scripts/lint.sh
 docker-compose exec -T backend ./scripts/test.sh
-docker-compose exec -T frontend npm run type:check
+docker-compose exec -T frontend npm run typecheck
 docker-compose exec -T frontend npm run lint
 docker-compose exec -T frontend npm run test
 
