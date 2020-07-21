@@ -219,18 +219,51 @@ exports[`CustomApp layout matches snapshot 1`] = `
       </ul>
     </header>
     <main
-      class="ant-layout-content"
-      style="padding: 100px 50px 50px;"
+      class="ant-layout-content layout-content"
     >
       <h1>
         Data portal WASH Mali
       </h1>
+      <p>
+        In this portal X, Y, Z. Please see the menu above for insights and data visualisations 
+        <strong>
+          per WASH theme
+        </strong>
+        , or go immediately to the 
+        <strong>
+          raw data
+        </strong>
+        :
+      </p>
+      <p>
+        <button
+          class="ant-btn ant-btn-primary"
+          type="button"
+        >
+          <span>
+            View raw data
+          </span>
+        </button>
+      </p>
+      <h2>
+        Overview of data by region
+      </h2>
+      <p>
+        The graph below gives an overview of the main indicators by region used by the DNH. Namely: functionality rate, access rate and equipment rate. For more information, see the data and graphics section.
+      </p>
+      <div
+        style="height: 35vh; max-width: 800px;"
+      >
+        <div
+          style="width: 100%; height: 100%;"
+        />
+      </div>
     </main>
     <footer
       class="ant-layout-footer"
     >
       <p>
-        Ut consequat feugiat justo, ornare dignissim sapien mollis tempor. Cras sed dui eget nisl ultricies cursus. Maecenas sollicitudin hendrerit cursus. Nullam pulvinar ex at neque maximus, dignissim pharetra justo interdum. Phasellus iaculis convallis ante. Proin vel interdum lorem, ac ornare neque. Donec quam quam, placerat hendrerit pulvinar venenatis, viverra eu neque. Pellentesque non quam velit. Aliquam urna quam, ullamcorper eu nisi sed, tempus sodales sapien. Aenean finibus mauris leo, sit amet luctus felis aliquet ut. In tristique tincidunt felis id posuere. Curabitur nisl orci, tincidunt nec ornare id, feugiat in eros. Donec et metus lobortis, bibendum mauris vitae, scelerisque ipsum.
+        @2020
       </p>
     </footer>
   </section>

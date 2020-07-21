@@ -56,24 +56,12 @@ const CustomApp: StatelessComponent<AppProps> = ({ Component, pageProps }) => {
         </Menu>
       </Header>
 
-      <Content style={{ padding: '100px 50px 50px' }}>
+      <Content className="layout-content">
         <Component {...pageProps} />
       </Content>
 
       <Footer>
-        <p>
-          Ut consequat feugiat justo, ornare dignissim sapien mollis tempor.
-          Cras sed dui eget nisl ultricies cursus. Maecenas sollicitudin
-          hendrerit cursus. Nullam pulvinar ex at neque maximus, dignissim
-          pharetra justo interdum. Phasellus iaculis convallis ante. Proin vel
-          interdum lorem, ac ornare neque. Donec quam quam, placerat hendrerit
-          pulvinar venenatis, viverra eu neque. Pellentesque non quam velit.
-          Aliquam urna quam, ullamcorper eu nisi sed, tempus sodales sapien.
-          Aenean finibus mauris leo, sit amet luctus felis aliquet ut. In
-          tristique tincidunt felis id posuere. Curabitur nisl orci, tincidunt
-          nec ornare id, feugiat in eros. Donec et metus lobortis, bibendum
-          mauris vitae, scelerisque ipsum.
-        </p>
+        <p>@2020</p>
       </Footer>
     </Layout>
   )

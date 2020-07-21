@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@nivo/bar": "^0.62.0",
     "antd": "^4.4.2",
     "next": "^9.4.4",
     "node-fetch": "^2.6.0",
