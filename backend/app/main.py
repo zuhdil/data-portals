@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, sessionmaker
 
+from app.api.v1.router import router
 from app.config import Settings
 
 app = FastAPI()
@@ -51,3 +52,6 @@ def get_database_session(
 async def ping(session: Session = Depends(get_database_session)) -> Any:
     result = session.execute("SELECT 1")
     return {"ping": "pong!", "db": True if result else False}
+
+
+app.include_router(router, prefix="/api/v1")

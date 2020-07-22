@@ -108,6 +108,7 @@
   "jest": {
     "collectCoverageFrom": [
       "**/*.{js,jsx,ts,tsx}",
+      "!./config.ts",
       "!**/*.d.ts",
       "!**/node_modules/**",
       "!**/.next/**",
@@ -125,6 +126,9 @@
     "moduleNameMapper": {
       "\\.css$": "identity-obj-proxy"
     },
+    "setupFilesAfterEnv": [
+      "./tests/setup-env.js"
+    ],
     "testPathIgnorePatterns": [
       "node_modules/",
       ".next/"
