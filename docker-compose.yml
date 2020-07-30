@@ -15,8 +15,6 @@ services:
     build:
       context: ./frontend
       target: devel
-      args:
-        INSTALL_DEV: ${INSTALL_DEV-true}
     command: npm run dev
     env_file: .env
     volumes:

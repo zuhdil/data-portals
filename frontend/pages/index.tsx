@@ -1,24 +1,16 @@
 import { StatelessComponent } from 'react'
 import Link from 'next/link'
-import { Button } from 'antd'
-import { ResponsiveBar } from '@nivo/bar'
-import { TickFormatter } from '@nivo/axes'
 import { GetServerSideProps } from 'next'
-import fetch from 'node-fetch'
+import { Button } from 'antd'
+import { TickFormatter } from '@nivo/axes'
 import { API_URL } from '../config'
-
-type Data = {
-  Region: string
-  PMH: number
-  Puits: number
-  SAEP: number
-}
+import GroupBarChart from '../components/GroupBarChart'
 
 type Props = {
-  dataset: Data[]
+  sourceUrl: string
 }
 
-const Home: StatelessComponent<Props> = ({ dataset }) => {
+const Home: StatelessComponent<Props> = ({ sourceUrl }) => {
   return (
     <>
       <h1>Data portal WASH Mali</h1>
@@ -39,13 +31,11 @@ const Home: StatelessComponent<Props> = ({ dataset }) => {
         by the DNH. Namely: functionality rate, access rate and equipment rate.
         For more information, see the data and graphics section.
       </p>
-      <div style={{ height: '35vh', maxWidth: '800px' }}>
-        <ResponsiveBar
-          data={dataset}
+      <div style={{ height: '50vh', width: '100%', maxWidth: '1000px' }}>
+        <GroupBarChart
+          source={sourceUrl}
           keys={['PMH', 'Puits', 'SAEP']}
           indexBy="Region"
-          groupMode="grouped"
-          colors={{ scheme: 'category10' }}
           margin={{ top: 25, right: 0, bottom: 100, left: 55 }}
           maxValue={100}
           axisBottom={{
@@ -79,12 +69,9 @@ const Home: StatelessComponent<Props> = ({ dataset }) => {
 export const formatPercentage: TickFormatter = (value) => value + '%'
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const res = await fetch(API_URL + '/functionality-rate-by-region')
-  const json = await res.json()
-
   return {
     props: {
-      dataset: json,
+      sourceUrl: API_URL + '/functionality-rate-by-region',
     },
   }
 }

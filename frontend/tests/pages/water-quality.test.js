@@ -1,10 +1,33 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import WaterQuality from '../../pages/water-quality'
+import WaterQuality, { getServerSideProps } from '../../pages/water-quality'
+import { server, rest } from '../mocks/server'
+import { API_URL } from '../../config'
 
 describe('Water Quality page', () => {
+  const fakeGeojson = {
+    type: 'FeatureCollection',
+    features: [],
+  }
+
   it('matches snapshot', () => {
-    const { asFragment } = render(<WaterQuality />, {})
+    const sourceUrl = API_URL + '/site-points.geojson'
+
+    server.use(
+      rest.get(sourceUrl, (_, res, ctx) => {
+        return res(ctx.json(fakeGeojson))
+      })
+    )
+
+    const { asFragment } = render(<WaterQuality sourceUrl={sourceUrl} />, {})
+
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('getServerSideProps', async () => {
+    const respone = await getServerSideProps()
+
+    expect(respone.props).toHaveProperty('sourceUrl')
+    expect(respone.props).toHaveProperty('mapboxToken')
   })
 })

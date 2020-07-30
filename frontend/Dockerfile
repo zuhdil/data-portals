@@ -5,9 +5,7 @@ WORKDIR /usr/src/app
 
 COPY ./package*.json ./
 
-ARG INSTALL_DEV=false
-
-RUN bash -c "if [ $INSTALL_DEV == 'true' ] ; then npm install ; else npm install --production; fi"
+RUN npm install
 
 COPY . .
 

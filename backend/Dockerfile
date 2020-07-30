@@ -16,6 +16,8 @@ COPY ./pyproject.toml ./poetry.lock* ./
 
 ARG INSTALL_DEV=false
 
+RUN pip install --upgrade pip
+
 RUN bash -c "if [ $INSTALL_DEV == 'true' ] ; then pip install ipython ; fi"
 
 RUN bash -c "if [ $INSTALL_DEV == 'true' ] ; then poetry install --no-root ; else poetry install --no-root --no-dev ; fi"

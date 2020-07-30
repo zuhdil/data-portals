@@ -33,7 +33,7 @@ exports[`Home page matches snapshot 1`] = `
     The graph below gives an overview of the main indicators by region used by the DNH. Namely: functionality rate, access rate and equipment rate. For more information, see the data and graphics section.
   </p>
   <div
-    style="height: 35vh; max-width: 800px;"
+    style="height: 50vh; width: 100%; max-width: 1000px;"
   >
     <div
       style="width: 100%; height: 100%;"

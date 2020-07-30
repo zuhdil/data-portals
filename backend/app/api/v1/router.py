@@ -4,6 +4,7 @@ from decimal import Decimal
 from typing import Any
 
 from fastapi import APIRouter
+from fastapi.responses import FileResponse
 
 router = APIRouter()
 
@@ -29,3 +30,15 @@ async def get_functionality_rate_by_region() -> Any:
             }
             for row in reader
         ]
+
+
+@router.get("/site-points.geojson")
+def get_site_points_raw() -> Any:
+    filename = os.path.realpath(
+        os.path.join(
+            os.getcwd(),
+            os.path.dirname(__file__),
+            "../../../datasets/site_points_deau_mali.geojson",
+        )
+    )
+    return FileResponse(filename)

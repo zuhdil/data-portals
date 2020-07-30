@@ -1,6 +1,10 @@
 import React from 'react'
-import { render } from '@testing-library/react'
-import Home, { getServerSideProps, formatPercentage } from '../../pages/index'
+import {
+  render,
+  waitForElementToBeRemoved,
+  screen,
+} from '@testing-library/react'
+import Home, { formatPercentage, getServerSideProps } from '../../pages/index'
 import { server, rest } from '../mocks/server'
 import { API_URL } from '../../config'
 
@@ -12,19 +16,25 @@ describe('Home page', () => {
     SAEP: 1,
   }
 
-  it('matches snapshot', () => {
-    const { asFragment } = render(<Home dataset={[fakeData]} />, {})
-    expect(asFragment()).toMatchSnapshot()
-  })
-
-  it('should call backend for dataset', async () => {
+  it('matches snapshot', async () => {
+    const sourceUrl = API_URL + '/functionality-rate-by-region'
     server.use(
-      rest.get(API_URL + '/functionality-rate-by-region', (_, res, ctx) => {
+      rest.get(sourceUrl, (_, res, ctx) => {
         return res(ctx.json([fakeData]))
       })
     )
-    const response = await getServerSideProps()
-    expect(response).toEqual({ props: { dataset: [fakeData] } })
+
+    const { asFragment } = render(<Home sourceUrl={sourceUrl} />, {})
+
+    await waitForElementToBeRemoved(() => screen.getByText(/loading/i))
+
+    expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('getServerSideProps', async () => {
+    const respone = await getServerSideProps()
+
+    expect(respone.props).toHaveProperty('sourceUrl')
   })
 })
 
